@@ -1,0 +1,28 @@
+# Xcode
+*.xcuserstate
+*.xcworkspace
+*.xcodeproj/project.xcworkspace
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/
+*.xcscmblueprint
+*.playground/
+*.xcarchive
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+
+# Build artifacts
+*.o
+*.a
+*.swiftdoc
+*.swiftmodule
+*.swiftsourceinfo
+DerivedData/
+build/
+
+# macOS
+.DS_Store
+
+
