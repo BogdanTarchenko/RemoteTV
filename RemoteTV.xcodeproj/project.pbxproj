@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8F2B347E2DE5B83600A417C8 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 8F2B347D2DE5B83600A417C8 /* Swinject */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8F19A8E22DE476660005E946 /* RemoteTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2B347E2DE5B83600A417C8 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = RemoteTV;
 			packageProductDependencies = (
+				8F2B347D2DE5B83600A417C8 /* Swinject */,
 			);
 			productName = RemoteTV;
 			productReference = 8F19A8E22DE476660005E946 /* RemoteTV.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 8F19A8D92DE476660005E946;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8F2B347C2DE5B83600A417C8 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F19A8E32DE476660005E946 /* Products */;
 			projectDirPath = "";
@@ -351,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F2B347C2DE5B83600A417C8 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F2B347D2DE5B83600A417C8 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F2B347C2DE5B83600A417C8 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F19A8DA2DE476660005E946 /* Project object */;
 }
