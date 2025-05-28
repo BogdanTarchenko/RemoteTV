@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+// MARK: - Font
 extension Font {
+
     static let onboardTitle = Font.custom("Inter18pt-Bold", size: 28)
     static let body = Font.custom("Inter18pt-Regular", size: 16)
     static let body1 = Font.custom("Inter18pt-Regular", size: 14)

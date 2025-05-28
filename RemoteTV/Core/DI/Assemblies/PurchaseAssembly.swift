@@ -24,5 +24,11 @@ final class PurchaseAssembly: Assembly {
                 repository: resolver.resolve(PurchaseRepositoryProtocol.self)!
             )
         }
+        
+        container.register(MockPurchaseUseCaseProtocol.self) { resolver in
+            MockPurchaseUseCase(
+                repository: resolver.resolve(PurchaseRepositoryProtocol.self)!
+            )
+        }
     }
 }

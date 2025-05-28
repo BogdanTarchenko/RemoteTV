@@ -60,6 +60,11 @@ extension AppCoordinator: OnboardingCoordinatorDelegate {
         removeDependency(childCoordinators.last)
         showMain()
     }
+    
+    func onboardingDidFinishPurchase() {
+        removeDependency(childCoordinators.last)
+        showMain()
+    }
 }
 
 extension AppCoordinator: MainCoordinatorDelegate {
