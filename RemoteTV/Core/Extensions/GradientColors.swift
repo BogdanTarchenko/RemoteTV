@@ -48,7 +48,7 @@ enum PrimaryColor {
         switch self {
         case .red:
             return [
-                .init(color: gradientColors[0], location: 0.3013),
+                .init(color: gradientColors[0], location: 0.0),
                 .init(color: gradientColors[1], location: 1.0)
             ]
         case .purple:
@@ -67,7 +67,7 @@ enum PrimaryColor {
     var startPoint: UnitPoint {
         switch self {
         case .red:
-            return UnitPoint(x: 0.2, y: 0.8)
+            return UnitPoint(x: 0.35, y: 0.275)
         case .purple:
             return UnitPoint(x: 0.3, y: 0.7)
         case .green:
@@ -78,7 +78,7 @@ enum PrimaryColor {
     var endPoint: UnitPoint {
         switch self {
         case .red:
-            return UnitPoint(x: 0.8, y: 0.2)
+            return UnitPoint(x: 0.883, y: 1.216)
         case .purple:
             return UnitPoint(x: 0.7, y: 0.3)
         case .green:
@@ -182,6 +182,53 @@ enum ButtonsRippleColor {
             return UnitPoint(x: 0.8, y: 0.2)
         case .purpleGradient:
             return UnitPoint(x: 0.7, y: 0.3)
+        }
+    }
+    
+    var linearGradient: LinearGradient {
+        LinearGradient(
+            stops: stops,
+            startPoint: startPoint,
+            endPoint: endPoint
+        )
+    }
+}
+
+// MARK: - BackgroundColor
+enum BackgroundColor {
+    case onboarding
+    
+    var gradientColors: [Color] {
+        switch self {
+        case .onboarding:
+            return [
+                Color(red: 200/255, green: 19/255, blue: 92/255),  // #C8135C
+                Color(red: 29/255, green: 27/255, blue: 41/255)    // #1D1B29
+            ]
+        }
+    }
+    
+    var stops: [Gradient.Stop] {
+        switch self {
+        case .onboarding:
+            return [
+                .init(color: gradientColors[0], location: 0.0),
+                .init(color: gradientColors[1], location: 1.0)
+            ]
+        }
+    }
+    
+    var startPoint: UnitPoint {
+        switch self {
+        case .onboarding:
+            return UnitPoint.top
+        }
+    }
+    
+    var endPoint: UnitPoint {
+        switch self {
+        case .onboarding:
+            return UnitPoint.bottom
         }
     }
     

@@ -1,10 +1,61 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    "3-day free trial enabled" : {
+
+    },
+    "Access to sleep timer, touchpad\nand multimedia controller" : {
+
+    },
+    "Enable a 3-day free trial" : {
+
+    },
     "Helllooo" : {
 
     },
     "Hello, World!" : {
+
+    },
+    "Not sure yet?" : {
+
+    },
+    "privacy_policy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        }
+      }
+    },
+    "restore" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore"
+          }
+        }
+      }
+    },
+    "terms_of_use" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Use"
+          }
+        }
+      }
+    },
+    "Thank you for the app. It connects quickly and works properly with our smart TV. The irreplaceable app, no problems with the remote anymore." : {
 
     },
     "Привет, мир" : {

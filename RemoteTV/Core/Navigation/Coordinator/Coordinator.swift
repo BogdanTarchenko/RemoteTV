@@ -35,6 +35,7 @@ class BaseCoordinator: Coordinator {
 // MARK: Coordinator Delegates
 protocol OnboardingCoordinatorDelegate: AnyObject {
     func onboardingDidFinish()
+    func onboardingDidFinishPurchase()
 }
 
 protocol MainCoordinatorDelegate: AnyObject {
