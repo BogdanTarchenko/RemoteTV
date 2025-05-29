@@ -10,19 +10,6 @@ import SwiftUI
 struct ConnectionGuideView: View {
     @Environment(\.presentationMode) var presentationMode
     
-    init() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(Color.bgLevel1)
-        
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(Color.textAndIconsWhite100)]
-        appearance.titleTextAttributes = [.foregroundColor: UIColor(Color.textAndIconsWhite100)]
-        
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().compactAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    }
-    
     var body: some View {
         ZStack {
             Color.bgLevel1.edgesIgnoringSafeArea(.all)
