@@ -8,7 +8,17 @@
 import SwiftUI
 
 struct RemoteMainPageView: View {
+    let currentPage: Int
+    let connectionGuideButtonAction: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        switch currentPage {
+        case 0:
+            RemoteMainConnectionGuideButton(action: connectionGuideButtonAction)
+        case 1:
+            EmptyView()
+        default:
+            EmptyView()
+        }
     }
 }

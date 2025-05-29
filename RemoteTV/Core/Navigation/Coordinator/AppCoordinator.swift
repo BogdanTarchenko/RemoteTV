@@ -70,6 +70,5 @@ extension AppCoordinator: OnboardingCoordinatorDelegate {
 extension AppCoordinator: MainCoordinatorDelegate {
     func mainDidFinish() {
         removeDependency(childCoordinators.last)
-        showOnboarding()
     }
 }
