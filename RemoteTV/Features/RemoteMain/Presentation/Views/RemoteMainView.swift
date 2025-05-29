@@ -9,15 +9,29 @@ import SwiftUI
 
 struct RemoteMainView: View {
     @StateObject private var viewModel: RemoteMainViewModel
+    @State private var showConnectionGuide = false
     
     init(viewModel: RemoteMainViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
-        VStack {
-            Text("Helllooo")
+        NavigationView {
+            ZStack(alignment: .bottom) {
+                Color.bgLevel1.edgesIgnoringSafeArea(.all)
+                
+                RemoteMainPageView(currentPage: viewModel.currentPage, connectionGuideButtonAction: {
+                    showConnectionGuide = true
+                })
+            }
+            .navigationBarHidden(true)
+            .background(
+                NavigationLink(
+                    destination: ConnectionGuideView(),
+                    isActive: $showConnectionGuide,
+                    label: { EmptyView() }
+                )
+            )
         }
-        .background(Color.red)
     }
 }

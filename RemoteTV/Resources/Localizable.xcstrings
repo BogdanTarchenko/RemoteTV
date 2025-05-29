@@ -10,16 +10,31 @@
     "Access to sleep timer, touchpad\nand multimedia controller" : {
 
     },
-    "Enable a 3-day free trial" : {
+    "Be sure to connect your phone and TV to the same Wi-Fi network" : {
 
     },
-    "Helllooo" : {
+    "Connection Guide" : {
+
+    },
+    "Enable a 3-day free trial" : {
 
     },
     "Hello, World!" : {
 
     },
+    "If you denied local network access at login, go to your phone's settings to grant permission" : {
+
+    },
+    "Learn how to connect to your TV\nin just a few easy steps" : {
+
+    },
     "Not sure yet?" : {
+
+    },
+    "Open the device search and connection screen by clicking the \"Connect device\" button at the top of the screen" : {
+
+    },
+    "Please note!" : {
 
     },
     "privacy_policy" : {
@@ -44,6 +59,21 @@
         }
       }
     },
+    "Step 1: Connecting to a local network" : {
+
+    },
+    "Step 2: Connect your device" : {
+
+    },
+    "Step 3: Using the Remote" : {
+
+    },
+    "Swipe to open extended functionality" : {
+
+    },
+    "Switch between sections of the remote control using the button on the right side of the screen" : {
+
+    },
     "terms_of_use" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -56,6 +86,15 @@
       }
     },
     "Thank you for the app. It connects quickly and works properly with our smart TV. The irreplaceable app, no problems with the remote anymore." : {
+
+    },
+    "The remote only works with IG TVs" : {
+
+    },
+    "Use the touchpad function to open the desired section on your TV by sliding your finger across the touch zone" : {
+
+    },
+    "Wait until the search for devices is complete and connect the necessary one" : {
 
     },
     "Привет, мир" : {

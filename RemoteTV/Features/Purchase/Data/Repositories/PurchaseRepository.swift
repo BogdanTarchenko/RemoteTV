@@ -13,7 +13,7 @@ final class PurchaseRepository: PurchaseRepositoryProtocol {
     }
     
     func checkPurchaseStatus() async -> PurchaseStatus {
-        if let status: PurchaseStatus = try? await storage.load(forKey: "purchase_status1") {
+        if let status: PurchaseStatus = try? await storage.load(forKey: "purchase_status") {
             return status
         }
         return .notPurchased

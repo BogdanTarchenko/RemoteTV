@@ -9,12 +9,23 @@ import Foundation
 import Swinject
 
 final class RemoteMainViewModel: ObservableObject {
+    @Published var currentPage = 0 {
+        didSet {
+            
+        }
+    }
+    
     @Published private(set) var isLoading = false
     @Published private(set) var error: Error?
     
-    private let purchaseRepository: PurchaseRepositoryProtocol
+    weak var delegate: RemoteMainViewModelDelegate?
     
-    init(container: Container) {
-        self.purchaseRepository = container.resolve(PurchaseRepositoryProtocol.self)!
+    init(delegate: RemoteMainViewModelDelegate? = nil) {
+        self.delegate = delegate
+    }
+    
+    @MainActor
+    func handleConnectionGuideButtonTapped() {
+        delegate?.viewModelDidRequestConnectionGuide()
     }
 }
