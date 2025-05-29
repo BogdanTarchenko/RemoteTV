@@ -13,6 +13,9 @@
     "Be sure to connect your phone and TV to the same Wi-Fi network" : {
 
     },
+    "Connect device" : {
+
+    },
     "Connection Guide" : {
 
     },
@@ -58,6 +61,9 @@
           }
         }
       }
+    },
+    "Settings" : {
+
     },
     "Step 1: Connecting to a local network" : {
 

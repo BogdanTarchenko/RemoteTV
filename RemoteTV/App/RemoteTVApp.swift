@@ -35,6 +35,17 @@ struct RemoteTVApp: App {
         let coordinator = container.resolve(AppCoordinator.self)!
         _appCoordinator = StateObject(wrappedValue: coordinator)
         coordinator.start()
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(Color.bgLevel1)
+        
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(Color.textAndIconsWhite100)]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor(Color.textAndIconsWhite100)]
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
     var body: some Scene {

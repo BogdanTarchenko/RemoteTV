@@ -16,7 +16,6 @@ struct OnboardingMiscStackView: View {
     var body: some View {
         HStack {
             Button(action: {
-                print("\(leadingText) tapped")
                 if let url = URL(string: Constants.privacyPolicyURLString) {
                     UIApplication.shared.open(url)
                 }
@@ -29,7 +28,7 @@ struct OnboardingMiscStackView: View {
             Spacer()
             
             Button(action: {
-                print("\(centerText) tapped")
+                
             }) {
                 Text(centerText)
                     .font(.caption)
@@ -39,7 +38,6 @@ struct OnboardingMiscStackView: View {
             Spacer()
             
             Button(action: {
-                print("\(trailingText) tapped")
                 if let url = URL(string: Constants.termsOfUseURLString) {
                     UIApplication.shared.open(url)
                 }
