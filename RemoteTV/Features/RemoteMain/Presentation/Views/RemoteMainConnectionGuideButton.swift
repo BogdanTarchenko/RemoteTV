@@ -36,6 +36,7 @@ struct RemoteMainConnectionGuideButton: View {
             .padding(.vertical, 12)
             .padding(.horizontal, 16)
             .frame(maxWidth: .infinity)
+            .background(Color.bgLevel1)
             .cornerRadius(12)
             .overlay(
                 RoundedRectangle(cornerRadius: 12)

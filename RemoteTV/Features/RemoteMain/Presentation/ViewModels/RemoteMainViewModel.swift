@@ -9,6 +9,7 @@ import Foundation
 import Swinject
 
 final class RemoteMainViewModel: ObservableObject {
+    // Тут через TabView сделал бы потом, currentPage определял бы состояние пульта
     @Published var currentPage = 0 {
         didSet {
             
@@ -17,6 +18,8 @@ final class RemoteMainViewModel: ObservableObject {
     
     @Published private(set) var isLoading = false
     @Published private(set) var error: Error?
+    
+    @Published var connectedDeviceName: String = ""
     
     weak var delegate: RemoteMainViewModelDelegate?
     

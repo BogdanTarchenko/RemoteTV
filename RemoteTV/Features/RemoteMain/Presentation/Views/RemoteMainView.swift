@@ -11,6 +11,7 @@ struct RemoteMainView: View {
     @StateObject private var viewModel: RemoteMainViewModel
     @State private var showConnectionGuide = false
     @State private var showSettings = false
+    @State private var showDeviceConnection = false
     
     init(viewModel: RemoteMainViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -23,6 +24,7 @@ struct RemoteMainView: View {
             RemoteMainPageView(currentPage: viewModel.currentPage, connectionGuideButtonAction: {
                 showConnectionGuide = true
             })
+            .padding(.bottom, 16)
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
@@ -39,9 +41,20 @@ struct RemoteMainView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Text("Connect device")
-                    .bodyStyle()
-                    .foregroundColor(.textAndIconsWhite100)
+                Button(action: {
+                    showDeviceConnection = true
+                }) {
+                    HStack(alignment: .center, spacing: 8) {
+                        Text(viewModel.connectedDeviceName == "" ? "Connect device" : viewModel.connectedDeviceName)
+                            .bodyStyle()
+                            .foregroundColor(.textAndIconsWhite100)
+                        Image(systemName: "chevron.down")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 12, height: 8)
+                            .foregroundColor(.textAndIconsWhite100)
+                    }
+                }
             }
         }
         .background(
@@ -60,5 +73,15 @@ struct RemoteMainView: View {
             )
             .background(EmptyView())
         )
+        
+        .background(
+            NavigationLink(
+                destination: DeviceConnectionView(viewModel: DeviceConnectionViewModel()),
+                isActive: $showDeviceConnection,
+                label: { EmptyView() }
+            )
+            .background(EmptyView())
+        )
+
     }
 }
